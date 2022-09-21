@@ -1,0 +1,482 @@
+%%
+%% This is file `sample-acmtog.tex',
+%% generated with the docstrip utility.
+%%
+%% The original source files were:
+%%
+%% samples.dtx  (with options: `acmtog')
+%% 
+%% IMPORTANT NOTICE:
+%% 
+%% For the copyright see the source file.
+%% 
+%% Any modified versions of this file must be renamed
+%% with new filenames distinct from sample-acmtog.tex.
+%% 
+%% For distribution of the original source see the terms
+%% for copying and modification in the file samples.dtx.
+%% 
+%% This generated file may be distributed as long as the
+%% original source files, as listed above, are part of the
+%% same distribution. (The sources need not necessarily be
+%% in the same archive or directory.)
+%%
+%%
+%% Commands for TeXCount
+%TC:macro \cite [option:text,text]
+%TC:macro \citep [option:text,text]
+%TC:macro \citet [option:text,text]
+%TC:envir table 0 1
+%TC:envir table* 0 1
+%TC:envir tabular [ignore] word
+%TC:envir displaymath 0 word
+%TC:envir math 0 word
+%TC:envir comment 0 0
+%%
+%%
+%% The first command in your LaTeX source must be the \documentclass command.
+\documentclass[acmtog]{acmart}
+\usepackage{subcaption}
+
+%%
+%% \BibTeX command to typeset BibTeX logo in the docs
+\AtBeginDocument{%
+  \providecommand\BibTeX{{%
+    \normalfont B\kern-0.5em{\scshape i\kern-0.25em b}\kern-0.8em\TeX}}}
+
+%% Rights management information.  This information is sent to you
+%% when you complete the rights form.  These commands have SAMPLE
+%% values in them; it is your responsibility as an author to replace
+%% the commands and values with those provided to you when you
+%% complete the rights form.
+\setcopyright{acmcopyright}
+\copyrightyear{2018}
+\acmYear{2018}
+\acmDOI{XXXXXXX.XXXXXXX}
+
+
+%%
+%% These commands are for a JOURNAL article.
+\acmJournal{TOG}
+\acmVolume{37}
+\acmNumber{4}
+\acmArticle{111}
+\acmMonth{8}
+
+%%
+%% Submission ID.
+%% Use this when submitting an article to a sponsored event. You'll
+%% receive a unique submission ID from the organizers
+%% of the event, and this ID should be used as the parameter to this command.
+%%\acmSubmissionID{123-A56-BU3}
+
+%%
+%% The majority of ACM publications use numbered citations and
+%% references.  The command \citestyle{authoryear} switches to the
+%% "author year" style.
+%%
+%% If you are preparing content for an event
+%% sponsored by ACM SIGGRAPH, you must use the "author year" style of
+%% citations and references.
+\citestyle{acmauthoryear}
+
+%%
+%% end of the preamble, start of the body of the document source.
+\begin{document}
+
+%%
+%% The "title" command has an optional parameter,
+%% allowing the author to define a "short title" to be used in page headers.
+\title{Encouraging emotion regulation in social media conversations through self-reflection}
+
+%%
+%% The "author" command and its associated commands are used to define
+%% the authors and their affiliations.
+%% Of note is the shared affiliation of the first two authors, and the
+%% "authornote" and "authornotemark" commands
+%% used to denote shared contribution to the research.
+\author{Ben Trovato}
+\authornote{Both authors contributed equally to this research.}
+\email{trovato@corporation.com}
+\orcid{1234-5678-9012}
+\author{G.K.M. Tobin}
+\authornotemark[1]
+\email{webmaster@marysville-ohio.com}
+\affiliation{%
+  \institution{Institute for Clarity in Documentation}
+  \streetaddress{P.O. Box 1212}
+  \city{Dublin}
+  \state{Ohio}
+  \country{USA}
+  \postcode{43017-6221}
+}
+
+\author{Lars Th{\o}rv{\"a}ld}
+\affiliation{%
+  \institution{The Th{\o}rv{\"a}ld Group}
+  \streetaddress{1 Th{\o}rv{\"a}ld Circle}
+  \city{Hekla}
+  \country{Iceland}}
+\email{larst@affiliation.org}
+
+\author{Valerie B\'eranger}
+\affiliation{%
+  \institution{Inria Paris-Rocquencourt}
+  \city{Rocquencourt}
+  \country{France}
+}
+
+
+
+% \author{Huifen Chan}
+% \affiliation{%
+%   \institution{Tsinghua University}
+%   \streetaddress{30 Shuangqing Rd}
+%   \city{Haidian Qu}
+%   \state{Beijing Shi}
+%   \country{China}}
+
+% \author{Charles Palmer}
+% \affiliation{%
+%   \institution{Palmer Research Laboratories}
+%   \streetaddress{8600 Datapoint Drive}
+%   \city{San Antonio}
+%   \state{Texas}
+%   \country{USA}
+%   \postcode{78229}}
+% \email{cpalmer@prl.com}
+
+% \author{John Smith}
+% \affiliation{%
+%   \institution{The Th{\o}rv{\"a}ld Group}
+%   \streetaddress{1 Th{\o}rv{\"a}ld Circle}
+%   \city{Hekla}
+%   \country{Iceland}}
+% \email{jsmith@affiliation.org}
+
+% \author{Julius P. Kumquat}
+% \affiliation{%
+%   \institution{The Kumquat Consortium}
+%   \city{New York}
+%   \country{USA}}
+% \email{jpkumquat@consortium.net}
+
+%%
+%% By default, the full list of authors will be used in the page
+%% headers. Often, this list is too long, and will overlap
+%% other information printed in the page headers. This command allows
+%% the author to define a more concise list
+%% of authors' names for this purpose.
+\renewcommand{\shortauthors}{Trovato and Tobin, et al.}
+
+%%
+%% The abstract is a short summary of the work to be presented in the
+%% article.
+\begin{abstract}
+%   A clear and well-documented \LaTeX\ document is presented as an
+%   article formatted for publication by ACM in a conference proceedings
+%   or journal publication. Based on the ``acmart'' document class, this
+%   article presents and explains many of the common variations, as well
+%   as many of the formatting elements an author may use in the
+%   preparation of the documentation of their work.
+\end{abstract}
+
+%%
+%% The code below is generated by the tool at http://dl.acm.org/ccs.cfm.
+%% Please copy and paste the code instead of the example below.
+%%
+\begin{CCSXML}
+<ccs2012>
+ <concept>
+  <concept_id>10010520.10010553.10010562</concept_id>
+  <concept_desc>Computer systems organization~Embedded systems</concept_desc>
+  <concept_significance>500</concept_significance>
+ </concept>
+ <concept>
+  <concept_id>10010520.10010575.10010755</concept_id>
+  <concept_desc>Computer systems organization~Redundancy</concept_desc>
+  <concept_significance>300</concept_significance>
+ </concept>
+ <concept>
+  <concept_id>10010520.10010553.10010554</concept_id>
+  <concept_desc>Computer systems organization~Robotics</concept_desc>
+  <concept_significance>100</concept_significance>
+ </concept>
+ <concept>
+  <concept_id>10003033.10003083.10003095</concept_id>
+  <concept_desc>Networks~Network reliability</concept_desc>
+  <concept_significance>100</concept_significance>
+ </concept>
+</ccs2012>
+\end{CCSXML}
+
+\ccsdesc[500]{Computer systems organization~Embedded systems}
+\ccsdesc[300]{Computer systems organization~Redundancy}
+\ccsdesc{Computer systems organization~Robotics}
+\ccsdesc[100]{Networks~Network reliability}
+
+%%
+%% Keywords. The author(s) should pick words that accurately describe
+%% the work being presented. Separate the keywords with commas.
+\keywords{datasets, neural networks, gaze detection, text tagging}
+
+
+%%
+%% This command processes the author and affiliation and title
+%% information and builds the first part of the formatted document.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\maketitle
+
+\section{Introduction}
+The practice of consciously modifying one's affective state is called emotion regulation. The ability to successfully perform emotion regulation is essential to function effectively in everyday life, to act appropriately in everyday interactions, or merely for hedonic purposes \cite{wadley2020digital}. The topic has been thoroughly explored in the field of psychological work, the study of cognitive behaviour as well as mental health. Owing to the boost in technology and access to digital media which provides a wide range of options available at ease, this practice of regulating emotions through the use of digital media has seen tremendous growth recently. 
+
+
+Digital technologies provide a greater range of strategic options that can be easily and effectively executed. Individuals combine a variety of applications and devices for purposefully managing emotions in daily life \cite{smith2022digital}. Some examples include listening to uplifting music while exercising, watching comedy or light-hearted videos to relieve stress after work, playing social video games when feeling lonely or scrolling through social media applications to combat boredom. Social media applications are widely used by people, multiple times throughout the day. These applications contain several emotional affordances (expressible, shareable, consumable, and evaluable), all of which can influence emotions as well as a behaviour associated with emotions \cite{steinert2022emotions}. Owing to its vast usage, activities on social media applications significantly impact online well-being. The prevalence of toxicity and hate speech in online conversations has been largely observed and studied in recent years. Social media conversations are fueled by connective action and fast information spread and have given rise to online movements and debates, the results of which have affected offline events \cite{saveski2021structure}, \cite{mirbabaie2021development}. Recently, people have started being vocal about how the hate received online impacts their daily lives and questions their safety online. Posts from political people in power, news websites and young content creators, to name a few, are victims of this. It has been discovered that encountering or dealing with disrespectful or rude behaviour online is now considered standard and a part of the deal \cite{thomas2022s}. There have been some rules enforced by social media applications where accounts with large following and engagement were banned to curb the spread of offensive speech, but toxicity is still prevailing as it arises from the actions of many mildly toxic people as opposed to a few highly toxic ones \cite{saveski2021structure}. 
+
+
+
+It is essential to ensure that social media platforms offer a safe space for healthy interaction and communication by managing the vulnerabilities to digital wellbeing. Previous studies in the field of social media and emotion regulation have focused on how social media facilitates online emotions and their effects on eudaimonic well-being. These include investigating how maladaptive emotion regulation methods affect problematic use of social media and smartphones, as well as determining how informed smartphone use can improve effective emotion regulation and social competence \cite{zsido2021role}. Prior research has also found that both active and passive social media usage have the potential to be procrastination or recovery activities depending on the automaticity and situational social media aspects \cite{hossain2022motivational}. \cite{ments2021second} present a second-order adaptive brain network model to simulate the process of emotion regulation in social media and discover how, while some emotion regulation strategies are protective in the short term, using them consistently results in worsened mood and relatively low well-being. Studies have also examined the user interfaces of social media applications and recommended design frameworks to assist emotion regulation in breaking the habit of making unpleasant comments on social media platforms by automatically identifying emotional aspects, such as the audience's anticipated emotional response to users' comments \cite{kiskola2021applying}.
+Although these developments provide significant insights into how the process of emotion regulation unfolds in social media applications, there is a lack of digital solutions available for implementation. Current tools for emotion regulation include mood-based recommendation systems and reminders, which can only provide temporary assistance and are difficult to incorporate into daily life \cite{wadley2020digital}, \cite{slovak2022designing}. Additionally, there is a lack of a common prototype for synthesising emotion regulation because the majority of recent research in the field of digital emotion regulation is based on field studies, ecological momentary assessments (EMA), or physiological sensors combined with facial data, making it difficult to extend and add incremental developments \cite{ruensuk2020you}. It is also necessary to understand how to identify the need for emotion regulation in online environments. This entails the creation of a solution that informs users of their micro-impacts on a post, rather than providing a broad overview of "what may be the consequence." This information about one's impact will call their anonymity on a post into question and encourage them to act responsibly.
+
+
+This work presents an innovative approach to delivering information regarding the need to regulate one's emotions and guiding them through the emotion regulation experience, in social media conversations, intending to embed the learning into their lives through repetitive application and, as a result, enhance online well-being. Because this study was conducted using publicly available data, it provides a foundation for expansion, extension, comparison, and contrast. Therefore, the main contributions of this work are:
+\begin{itemize}
+    \item Introduces a model for on-the-spot attention and response modulation support in online conversations by encouraging self-reflection in moments of ongoing highly elevated emotional expression.
+    \item Proposes a graph-based framework for identifying the need for emotion regulation in online social media conversations.
+    \item Presents design implications for social media applications to incorporate support for users' emotion regulation.
+\end{itemize}
+The remainder of this paper is structured as follows. We begin by reviewing recent developments in the literature, followed by a detailed description of the terms and methodologies used in this study, and finally, we summarise our research design. Then we present the results of the experiment and analysis before summarising the conclusion.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Related work}
+
+\subsection{Digital Emotion Regulation}
+
+%%%%%%%%%%%%%%%%%%
+
+\subsection{Analysis of emotions in social media conversations}
+
+%%%%%%%%%%%%%%%%%
+\subsection{Analysing influence of nodes social media conversation graphs}
+
+%%%%%%%%%%%%%%%%%
+\subsection{Identifying the need for emotion regulation}
+
+%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\section{Methodology}
+
+\subsection{Terminologies and Definitions}
+In this section, we describe the terms, keywords, and definitions used in our experiments and analysis.
+\begin{figure}[h]
+  \begin{minipage}{.25\textwidth}
+    \centering
+    \includegraphics[width=5cm,height=5cm,keepaspectratio]{sample_convv.png}
+    \subcaption{Sample Twitter Conversation}
+  \end{minipage}%
+  \begin{minipage}{.25\textwidth}
+    \centering
+    \includegraphics[width=5cm,height=5cm,keepaspectratio]{sample_conv_graphh.png}
+    \subcaption{Sample Twitter Conversation Graph}
+  \end{minipage}
+  
+%   \includegraphics[width=5cm,height=5cm,keepaspectratio]{samples/sample_convv.png}
+%   \includegraphics[width=5cm,height=5cm,keepaspectratio]{samples/sample_conv_graphh.png}
+  \caption{Sample Twitter conversation (a) and a conversation graph (b) for the same. In (b) node 1 is the Root node, representing the source tweet/post, nodes 2 \& 3 are comment nodes, nodes 4, 5, 6, 7, 8 are the responses and the dotted box contains the reply tree originating from node 3}
+  \label{SampleConv}
+  \end{figure}
+\begin{itemize}
+    \item Tweet/Post: This is the original tweet, the source of the conversation that is being analysed. This is also the Root node in the graph that is later used to analyse the conversation and is node 1 in Figure-\ref{SampleConv} (b).
+    \item Comment(s)/Reply: A comment is a direct response to the tweet or a comment on the original post and is nodes 2 \& 3 in Figure-\ref{SampleConv} (b).
+    \item Response(s): A response is a comment received on a comment, that is, it is not a direct reply to the source tweet, they are nodes 4-8 in Figure-\ref{SampleConv} (b).
+    \item Reply tree:  A reply tree is a thread generated from comments and their responses. It is represented by the dotted box in Figure-\ref{SampleConv} (b).
+    \item Conversation: This comprises the tweet/post along with all its comments, responses and reply trees, it is represented by the graph in Figure-\ref{SampleConv} (b).
+    \item Emotion Board: A key-value pair consisting of six elements, the keys denote the emotions and the values are a floating point number representing the cumulative proportion of each emotion exhibited by the post/tweet/root node.
+    \item Influence: The emotion board of the root node is representative of the combination of emotional expressions of its child nodes. Therefore, every node that is not the root node, has an impact on the root node, based on the emotion its text carries. The impact of a node is given by the function f(Ni). 
+\end{itemize}
+
+
+
+%%%%%%%%%%%%%%%%%%%
+
+\subsection{Methodological Framework}
+The proposed framework for encouraging emotion regulation in social media conversations is depicted in Figure-\ref{fig:Framework}. It is composed of three key components: data retrieval, emotion propagation analysis, and emotion regulation recommendations. The data retrieval process starts with gathering information from social media conversations, in this case Twitter conversations. In recent years, Twitter has been a popular destination for hashtag-based social movements such as \#MeToo and \#BlackLivesMatter, but the platform's free speech policy also increases the risk of hate and harassment. Therefore, we collected a variety of Twitter conversations and stored them in the form of CSV files, on which we used feature engineering to create a set of files in which each file contained a conversation and each row in the file consisted of a text string representing a tweet or a comment, as well as their ID and metadata (parameters like the number of comments received, authors who replied etc). The second component then analyses emotion propagation using these CSV files. It begins with categorising the emotions expressed in tweets. Emotions are divided into six primary and 27 secondary groups. We use the primary emotion categories in this work to classify the emotion in tweets. We generate a graph of the conversation after classifying the tweets into six emotion classes. This graph is used to calculate the emotional impact of individual tweets on the entire conversation as well as the percentage distribution of various emotions in the discussion. Following that, in the final component, we use the graph to identify the nodes that have the greatest impact on the emotion of the conversation and apply this information to identify the need for emotion regulation and recommend appropriate emotion regulation strategies.
+\begin{figure}[h]
+  
+    \centering
+    \includegraphics[width=8cm,height=8cm,keepaspectratio]{framework.pdf}
+%   \includegraphics[width=5cm,height=5cm,keepaspectratio]{samples/sample_convv.png}
+%   \includegraphics[width=5cm,height=5cm,keepaspectratio]{samples/sample_conv_graphh.png}
+  \caption{Framework for encouraging on-spot emotion regulation in social media conversations}
+  \label{fig:Framework}
+  \end{figure}
+%%%%%%%%%%%%%%%%%%%
+
+
+\subsection{Data}
+\begin{table}[]
+\centering
+\caption{Parameters used to fetch tweets}
+\label{tab:params}
+\begin{tabular}{|p{3cm}|p{4.8cm}|}
+\hline
+Parameter                                         & Description                                                                                                                          \\ \hline
+\texttt{author\_id}              & The unique identifier of the user who posted the tweet/comment/response.                                                             \\
+\texttt{conversation\_id}        & The unique identifier used to identify a conversation/thread on Twitter.                                                             \\
+\texttt{created\_at}             & Timestamp of the tweet/comment/response in UTC.                                                                                      \\
+\texttt{id}                      & The unique identifier of the tweet/comment/response on Twitter                                                                       \\
+\texttt{in\_reply\_to\_user\_id} & The author id of the user who received the response.                                                                                 \\
+\texttt{entities}                & Provides metadata and additional contextual information about Twitter posts. For instance, hashtags, user mentions, links, and so on. \\
+\texttt{lang}                    & Filter used to select English tweets.                                                                                                \\
+\texttt{text}                    & The text contained in the tweet along with the emoticons.                                                                            \\ \hline
+\end{tabular}
+\end{table}
+
+Twitter is regularly used by government officials in Australia, to post updates and notify of recent events or inform citizens of upcoming activities. For the purpose of this study, we analysed the tweets by Daniel Andrews, the premier of Victoria, for the period between June 2021 to August 2022. The aim was to collect a variety of conversations by topic, hashtags and context. These involved tweets about the various lockdowns, COVID vaccine updates, policy updates, local developments and announcements. A total of N conversations were selected for this analysis, each of which involved a minimum of 1000 direct responses, leading to a dataset of N*3000 rows. This data was downloaded using the \href{https://developer.twitter.com/en/docs/twitter-api}{Twitter API (Tweepy)} and the \href{https://developer.twitter.com/apitools/downloader}{tweet downloader tool} provided by Twitter. Every tweet on Twitter has a conversation ID, which was used to collect and organise tweets, comments and responses. It must be noted that each of these 50 conversations was separate tweets and not responses or quotes to another tweet. Table- \ref{tab:params} describes the parameters used while fetching the data:
+% \begin{itemize}
+%     \item \texttt{author\_id}
+%     \item \texttt{conversation\_id}
+%     \item \texttt{created\_at}
+%     \item \texttt{id}
+%     \item \texttt{in\_reply\_to\_user\_id}
+%     \item \texttt{entities}
+%     \item \texttt{lang}
+%     \item \texttt{text}
+% \end{itemize}
+
+
+For this experiment, tweets with only text and emoticons were taken into consideration. Tweets containing images, videos or external links were not considered as it is hard to evaluate the emotions expressed in media files and links. The tweets were mostly in English, and the occasional comments in a different language were removed. The data was downloaded in the form of CSV files, one per conversation and then used for further analysis. Users involved in a conversation were identified by their \texttt{author\_id} and the \texttt{in\_reply\_to\_user\_id} was used to associate comments with its responses. The entities parameter was used to trace the sequence of responses. The number of responses to each comment and the number of unique users who responded to the comment were also added as attributes to the data. 
+%%%%%%%%%%%%%%%%
+
+
+
+\subsection{Emotion Classification}
+Each row in the CSV file contained a text field representing either a tweet, a comment on a tweet or a response to a comment. The emotion expressed by the text in this field was determined using a text emotion classifier. A multi-label NLP classifier was used to categorise the tweets based on the six basic emotions (love, joy, sadness, anger, fear, and surprise). The emojis in the tweets were replaced with vector representations generated by \href{https://radimrehurek.com/gensim/}{Gensim} using the Emojinal library \cite{barry2021emojional}, after which the tweet text was tokenized using the \href{https://www.nltk.org/api/nltk.tokenize.casual.html}{TweetTokenizer}. The NLP classifier was trained and tested on the 'emotions' dataset, a two-column labelled dataset of Twitter messages with a text string and a label, it contains 20,000 rows of data \cite{saravia-etal-2018-carer}. Six emotions are described by the labels: love, joy, sadness, anger, fear, and surprise. For training, a four-layer sequential model with Bidirectional LSTM layers was used, and the data was divided 80:10:10 for training, validation, and testing. The model was trained for 20 epochs (increasing the epochs had no effect on accuracy) and achieved a testing accuracy of 87\%. The trained classifier was then used to predict the emotions expressed in the Twitter conversation. Every tweet, comment, and response in the conversation thread received an emotion label and a score, with the score indicating the probability with which the classifier predicted the emotion.
+%%%%%%%%%%%%%%%%
+
+
+\subsection{Graph Based Emotion Propagation Analysis}
+A graph was generated to represent the analysis of the conversations. Networks from Online Social Networks (OSN) are commonly defined by a graph in which the nodes represent the users in the network and the edges represent the links between the nodes \cite{antonakaki2021survey}. These graphs are useful for identifying user properties such as influence, as well as network properties such as homophily. However, the goal of this study is to analyse a conversation (in which users may have participated once or multiple times) and the "impact of the users' actions" on encouraging engagement in a conversation. Rather than identifying "problematic users," the idea is to identify "posts" that are troublesome within a conversation (or that trigger anger/hate within a conversation). The general influence or behaviour profile of users on the social network was not examined for this study. We believe that informing a user of the impact of their rude comment(s) on a particular instance, rather than ticketing them as inappropriate in general, would encourage them to self-reflect on a specific case. 
+
+
+It has been discovered that while public figures, media companies, and people with social influence bring a lot of initial attention to a social media post, it is the uninfluential and anonymous users who keep the engagement going and thus have a larger impact on the emotion that is propagated within a conversation \cite{solovev2022moral}, \cite{mirbabaie2021development}, \cite{saveski2021structure}. Informing users of their impact on the conversation will also question their sense of anonymity on a post and serve as a motivator to respond responsibly. As a result, for this experiment, the tweets, comments, and responses were treated as nodes in the graph, and the directed edges represented the nodes that received the responses. That is, if a comment has received n direct responses, it will have an in-degree of n. Self-loops were also present in the graph. 
+
+\textit{\textbf{G = (V, E, A)}, where V is the set of nodes, E is the set of edges representing the nodes' existing relations, and A denotes the set of attribute vectors. The value of n=|V| represents the total number of vertices, m=|E| represents the total number of edges, and A (A1, A2, A3... Ak) associates with nodes in V and describes their characteristics.}
+
+
+Finding influential nodes in a graph has been widely used in sentiment classification and the analysis of Online Social Networks (OSN). In the case of Twitter network analysis, although there is no widely accepted standard for identifying influential nodes, a combination of various connectivity/centrality-based attributes and machine learning methods has been applied \cite{berahmand2020new}, \cite{vilarinho2018global}, \cite{ban2021lexical}, \cite{bordoloi2020graph}. Because global connectivity is not a significant measure of a node's impact, in this case, attributes that focus on identifying nodes with high local impact were used. This is because two separate comments on a tweet can grow into large threads regardless of their connectivity or the presence of common nodes between them. The attributes that were used to represent the nodes are described in Table-\ref{tab:params_rule}.
+
+\begin{table}[]
+\centering
+\caption{Parameters used to find influential nodes in the conversation graph}
+\label{tab:params_rule}
+\begin{tabular}{|p{4cm}|p{4.2cm}|}
+\hline
+Parameter                                         & Description                                                                                                                          \\ \hline
+\texttt{number\_of\_direct\_responses}              & The in-degree of a node.                                                             \\
+\texttt{total\_engagement\_received}        & The number of ancestors of a node, the number of nodes in the reply tree of a node.                                                             \\
+\texttt{distance\_from\_root}             & The number of directed edges in the shortest path from a node to the root node.                                                                   \\
+\texttt{page\_rank}                      & The rank of a node in the graph, based on the structure of incoming edges.                                                                      \\
+\texttt{emotion\_score}                 & The probability with which the emotion classification model predicted the emotion for the text in the node.                              
+                                                                         \\ \hline
+\end{tabular}
+\end{table}
+
+The number of direct responses indicates a node's in-degree, and the total responses thread indicates a node's ancestors (number of nodes that have a path to the source). Pagerank is used to rank nodes with the same in-degree; (it has been preferred over betweenness centrality in this case because it estimates the nodes' local importance \cite{antonakaki2021survey}). The distance from the root is used as a factor to reinstate the distance of a trigger, a comment that initiated the reply tree is more influential than a response in the reply tree. Based on these attributes, the emotional influence of child nodes and the terminating nodes for the root node was calculated using the following rule: 
+
+
+\textit{The impact of nodes in G on the root node R is given by:}
+
+% 
+$\forall \,V \in G-\{R\},
+E(R) = \sum{E(V1, V2, V3....Vn)}
+where \,E(Vi) =\prod{Ai}$
+
+
+% \end{displaymath}
+
+% \textit{where E(Vi) = \texttt{number\_of\_direct\_responses}*\texttt{total\_engagement\_received}
+% *(1/\texttt{distance\_from\_root})*\texttt{page\_rank}*\texttt{emotion\_score}}
+
+
+%%%%%%%%%%%%%%%%
+\subsection{Recommending Emotion Regulation Strategies}
+
+%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\section{Analysis of Emotion Propagation}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\section{Results and Discussion}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+
+\section{Conclusion and Future Work}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\section{Rights Information}
+
+
+
+
+
+
+
+\section{Citations and Bibliographies}
+
+
+
+\section{Acknowledgments}
+
+
+
+
+
+
+
+%%
+%% The acknowledgments section is defined using the "acks" environment
+%% (and NOT an unnumbered section). This ensures the proper
+%% identification of the section in the article metadata, and the
+%% consistent spelling of the heading.
+
+
+%%
+%% The next two lines define the bibliography style to be used, and
+%% the bibliography file.
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{refs}
+
+%%
+%% If your work has an appendix, this is the place to put it.
+\appendix
+
+
+\end{document}
+\endinput
+%%
+%% End of file `sample-acmtog.tex'.
