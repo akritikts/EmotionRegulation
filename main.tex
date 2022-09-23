@@ -256,7 +256,7 @@ The remainder of this paper is structured as follows. We begin by reviewing rece
 \section{Related work}
 
 \subsection{Digital Emotion Regulation}
-
+\subsubsection{Implicit Emotion Regulation}
 %%%%%%%%%%%%%%%%%%
 
 \subsection{Analysis of emotions in social media conversations}
@@ -266,14 +266,16 @@ The remainder of this paper is structured as follows. We begin by reviewing rece
 
 %%%%%%%%%%%%%%%%%
 \subsection{Identifying the need for emotion regulation}
-
+By presenting "what has happened" as a result of a comment, this work proposes a way to avoid dismissing "what may happen" based on a comment.
 %%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-\section{Methodology}
+\section{Problem Statement and Proposed Methodology}
+\subsection{Problem Statement}
 
+%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Terminologies and Definitions}
 In this section, we describe the terms, keywords, and definitions used in our experiments and analysis.
 \begin{figure}[h]
@@ -364,7 +366,7 @@ Each row in the CSV file contained a text field representing either a tweet, a c
 
 
 \subsection{Graph Based Emotion Propagation Analysis}
-A graph was generated to represent the analysis of the conversations. Networks from Online Social Networks (OSN) are commonly defined by a graph in which the nodes represent the users in the network and the edges represent the links between the nodes \cite{antonakaki2021survey}. These graphs are useful for identifying user properties such as influence, as well as network properties such as homophily. However, the goal of this study is to analyse a conversation (in which users may have participated once or multiple times) and the "impact of the users' actions" on encouraging engagement in a conversation. Rather than identifying "problematic users," the idea is to identify "posts" that are troublesome within a conversation (or that trigger anger/hate within a conversation). The general influence or behaviour profile of users on the social network was not examined for this study. We believe that informing a user of the impact of their rude comment(s) on a particular instance, rather than ticketing them as inappropriate in general, would encourage them to self-reflect on a specific case. 
+In this work, we propose that a post or tweet is representative of the emotion it expresses as well as of the emotions expressed in its comments and responses. Hence, we calculate the overall emotion represented by a conversation, by summing up the emotional impact of its source tweet, comments and responses. A graph was generated to represent the analysis of the conversations. Networks from Online Social Networks (OSN) are commonly defined by a graph in which the nodes represent the users in the network and the edges represent the links between the nodes \cite{antonakaki2021survey}. These graphs are useful for identifying user properties such as influence, as well as network properties such as homophily. However, the goal of this study is to analyse a conversation (in which users may have participated once or multiple times) and the "impact of the users' actions" on encouraging engagement in a conversation. Rather than identifying "problematic users," the idea is to identify "posts" that are troublesome within a conversation (or that trigger anger/hate within a conversation). The general influence or behaviour profile of users on the social network was not examined for this study. We believe that informing a user of the impact of their rude comment(s) on a particular instance, rather than ticketing them as inappropriate in general, would encourage them to self-reflect on a specific case. 
 
 
 It has been discovered that while public figures, media companies, and people with social influence bring a lot of initial attention to a social media post, it is the uninfluential and anonymous users who keep the engagement going and thus have a larger impact on the emotion that is propagated within a conversation \cite{solovev2022moral}, \cite{mirbabaie2021development}, \cite{saveski2021structure}. Informing users of their impact on the conversation will also question their sense of anonymity on a post and serve as a motivator to respond responsibly. As a result, for this experiment, the tweets, comments, and responses were treated as nodes in the graph, and the directed edges represented the nodes that received the responses. That is, if a comment has received n direct responses, it will have an in-degree of n. Self-loops were also present in the graph. 
@@ -393,14 +395,14 @@ Parameter                                         & Description                 
 The number of direct responses indicates a node's in-degree, and the total responses thread indicates a node's ancestors (number of nodes that have a path to the source). Pagerank is used to rank nodes with the same in-degree; (it has been preferred over betweenness centrality in this case because it estimates the nodes' local importance \cite{antonakaki2021survey}). The distance from the root is used as a factor to reinstate the distance of a trigger, a comment that initiated the reply tree is more influential than a response in the reply tree. Based on these attributes, the emotional influence of child nodes and the terminating nodes for the root node was calculated using the following rule: 
 
 
-\textit{The impact of nodes in G on the root node R is given by:}
+\textit{The impact of nodes in G = (V, E, A) on the root node R is given by:}
 
 % 
 $\forall \,V \in G-\{R\},
 E(R) = \sum{E(V1, V2, V3....Vn)}
 where \,E(Vi) =\prod{Ai}$
 
-
+The rule is used to calculate the impact of nodes on a specific node, which in this case is the root. A threshold value was chosen based on the impact of nodes, which in this case was the mean value of node impacts on the root node. This was used to identify influential nodes, which were distinguished as nodes with a value greater than the threshold. After identifying the influential nodes \textit{(I = \{V1, V2...Vn\})} for the root node \textit{(R)}, the same rule can be used to find the nodes with the greatest impact on these influential nodes  \textit{(I = \{V11, V12...V1n\})} by considering the subgraph where the influential nodes \textit{(V1, V2..Vn)} are the root nodes.
 % \end{displaymath}
 
 % \textit{where E(Vi) = \texttt{number\_of\_direct\_responses}*\texttt{total\_engagement\_received}
@@ -408,7 +410,25 @@ where \,E(Vi) =\prod{Ai}$
 
 
 %%%%%%%%%%%%%%%%
-\subsection{Recommending Emotion Regulation Strategies}
+\subsection{Supporting On-Spot Emotion Regulation}
+Conversations in the form of comments or replies to posts are a pertinent aspect of social media platforms. However, they also increase the likelihood of online hate and harassment. According to research, 41\% of US adults have been victims of online hate and harassment \cite{thomas2022s}. Hence, this work aims to break down the occurrence of hate speech in conversations by quantifying their impact on the overall conversation, so that the users can be informed about their micro-impact on a conversation and be encouraged to act responsibly.
+
+After identifying the influential nodes in the conversation graph, the information can be used to inform users involved in the comment node's reply tree about the implications of their actions. This can be accompanied by highlighting the node based on the colour of the emotion it represents, as well as the percentage distributions of emotions, or by restricting further activity on the comment that is the reply tree's originating node. As shown in Figure 3, the post has colour-coded comments and associated reply trees in conversations according to the emotions they represent, the distribution of those emotions, and the influential nodes that have a significant impact on that distribution. Nodes 3, 5 and 6 are particularly key in the conversation's anger, with node 6 having the biggest contribution. As a result, it is frozen.
+\begin{figure}[h]
+  
+    \centering
+    \includegraphics[width=8cm,height=8cm,keepaspectratio]{emotion_impact.png}
+%   \includegraphics[width=5cm,height=5cm,keepaspectratio]{samples/sample_convv.png}
+%   \includegraphics[width=5cm,height=5cm,keepaspectratio]{samples/sample_conv_graphh.png}
+  \caption{Identifying influential comments/responses/threads in social media conversations. The comments are colour-coded according to the emotion they represent.}
+  \label{fig:Framework}
+  \end{figure}
+
+The decision to freeze a comment here is an attempt to identify the actions of a user or a group of users in order to avoid the post becoming hostile as a whole, as well as to decompose the toxic activity involved in a post by bringing it to light. It should be noted that suppression of anger or hate speech in this context is not the same as the inherent bias of promoting positive content on social media, but rather an attempt to avoid the induction of excessive hate on a post because it's simple to respond to a digitally induced emotional challenge with a digital action, such as expressing anger on a post by leaving an angry comment \cite{wang2021role}, \cite{smith2022digital}. The first step is self-reflection, which is similar to cognitive and dialectic behaviour therapy, which emphasises emotion regulation. Encouraging self-reflection by outlining the effects of previous user actions, will lead to a rise in awareness among the users and nudge them towards acting responsibly. 
+
+
+Implicit emotion control strategies involving cognitive change, such as reappraisal or non-judgemental acceptance, can be recommended to assist the users affected by the restricted activity on their comments and prevent the creation of similar reply trees. This can be fuelled by informing users about the overall emotional distribution of the conversation in an effort to help them empathise with other participants, which will subtly prompt the user to feel responsible. This approach avoids the users falling into the trap of anxiety based on their general perception while their anonymity is in question since it focuses on the actions of the users rather than the users themselves. Although it is debatable if preventing additional activity on a comment creates friction for participation, it protects users' right to free speech while posing a minor distraction, and the users' freedom of choice still remains with them \cite{kiskola2021applying}. Additionally, it has been found that one of the best ways to reduce toxicity online is through the moderation of online content \cite{thomas2022s}. Questioning the users' anonymity by displaying their impact on a conversation and its emotion distribution, or freezing a particular comment in a post (depending on the length of the post, the number of persons involved, or the intensity of the emotions) serves as a modest warning of rising toxicity in this situation.
+
 
 %%%%%%%%%%%%%%%%
 
