@@ -465,23 +465,23 @@ Implicit emotion control strategies involving cognitive change, such as reapprai
   \begin{minipage}{.33\textwidth}
     \centering
     \includegraphics[width=5cm,height=5cm,keepaspectratio]{WAnger_ws.pdf}
-    \subcaption{Dominant Emotion: Anger}
+    \subcaption{Dominant Emotion: Fear}
   \end{minipage}%
   \begin{minipage}{.33\textwidth}
     \centering
     \includegraphics[width=5cm,height=5cm,keepaspectratio]{WAnger_ws.pdf}
-    \subcaption{Dominant Emotion: Anger}
+    \subcaption{Dominant Emotion: Joy}
   \end{minipage}
  \medskip
   \begin{minipage}{.33\textwidth}
     \centering
     \includegraphics[width=5cm,height=5cm,keepaspectratio]{WAnger_ws.pdf}
-    \subcaption{Dominant Emotion: Anger}
+    \subcaption{Dominant Emotion: Love}
   \end{minipage}%
   \begin{minipage}{.33\textwidth}
     \centering
     \includegraphics[width=5cm,height=5cm,keepaspectratio]{WAnger_ws.pdf}
-    \subcaption{Dominant Emotion: Anger}
+    \subcaption{Dominant Emotion: Sadness}
   \end{minipage}
   
 %   \includegraphics[width=5cm,height=5cm,keepaspectratio]{samples/sample_convv.png}
@@ -491,6 +491,12 @@ Implicit emotion control strategies involving cognitive change, such as reapprai
   \end{figure*}
 \section{Experimental Evaluation and Analysis of Emotion Propagation}
 Toxicity in social media platforms has been observed in the form of hate speech, harassment, trolling, and cyberbullying, to name a few. Although these harmful activities have different intentions, they all follow the same path: uncivilised behaviour, or, in the case of text-based social media platforms, uncivil language. Recent research has looked into how Twitter conversations can be used to detect harassment and cyberbullying \cite{guberman2016quantifying}, \cite{georgakopoulos2019convolutional}, \cite{pavlopoulos2020toxicity}. Not only do these require contextual information and user profile data, but they are usually applied to a conversation after it has occurred. Social media platforms have implemented moderation strategies such as deplatforming and removing inappropriate comments, but they are based on static rules and are typically applied after the incident has occurred \cite{jhaver2021evaluating}. We introduce a framework for studying the transmission of emotions (via language) in real-time online conversations. The potential of this approach lies not only in determining whether or not a conversation is becoming toxic but also in determining why and how this is happening. We believe this framework will help reduce the possibility of a conversation becoming toxic by investigating the actions that lead to toxicity.
+
+
+On social media platforms where uncivil language is commonly used by a large number of users, hate speech-based toxicity has been discovered to be an important component of virality \cite{maarouf2022virality}, \cite{goel2016structural}. A viral spread corresponds to a rapid dissemination of a piece of information via connective action of users and is often fuelled by the emotions it entails. According to studies, both hate speech and toxicity spiral in action, resulting in a faster and more widespread dispersal. As a result, by monitoring the nature of information diffusion as well as the compounding effect of emotion propagation within a conversation graph, it is possible to identify when and how a conversation may become toxic and thus apply moderation strategies before it becomes toxic. The same method can be used to assess the need for emotion regulation. The goal here is to inform users involved in a conversation about the emotional impact of their actions and to gently nudge them towards a responsible mindset through repeated application of the same.
+
+A toxic tweet on Twitter is defined as an unreasonably rude or disrespectful comment that causes a person to leave the conversation. Hence, for this work, we define toxicity in a conversation as the disproportionate or excessive influx of toxic tweets/responses into an otherwise neutral post \cite{aroyo2019crowdsourcing}, \cite{xenos2021toxicity}. As previously discussed (Section 3.5) in this paper, we categorise tweets into six emotions (namely, anger, love, joy, fear, sadness, and surprise). The influx of anger has been regarded as rage-inducing, rude, or disrespectful, and is thus regarded as an indicator of toxicity.
+
 \begin{figure*}[h]
   \begin{minipage}{.33\textwidth}
     \centering
@@ -500,23 +506,23 @@ Toxicity in social media platforms has been observed in the form of hate speech,
   \begin{minipage}{.33\textwidth}
     \centering
     \includegraphics[width=5cm,height=5cm,keepaspectratio]{download.pdf}
-    \subcaption{Dominant Emotion: Anger}
+    \subcaption{Dominant Emotion: Fear}
   \end{minipage}%
   \begin{minipage}{.33\textwidth}
     \centering
     \includegraphics[width=5cm,height=5cm,keepaspectratio]{download.pdf}
-    \subcaption{Dominant Emotion: Anger}
+    \subcaption{Dominant Emotion: Joy}
   \end{minipage}
  \medskip
   \begin{minipage}{.33\textwidth}
     \centering
     \includegraphics[width=5cm,height=5cm,keepaspectratio]{download.pdf}
-    \subcaption{Dominant Emotion: Anger}
+    \subcaption{Dominant Emotion: Love}
   \end{minipage}%
   \begin{minipage}{.33\textwidth}
     \centering
     \includegraphics[width=5cm,height=5cm,keepaspectratio]{download.pdf}
-    \subcaption{Dominant Emotion: Anger}
+    \subcaption{Dominant Emotion: Sadness}
   \end{minipage}
   
 %   \includegraphics[width=5cm,height=5cm,keepaspectratio]{samples/sample_convv.png}
@@ -524,39 +530,6 @@ Toxicity in social media platforms has been observed in the form of hate speech,
   \caption{Percentage distribution of emotions in the reply tree of influential nodes of conversations where the dominant emotion is (a) Anger (b) Fear (c) Sadness (d) Joy and (e) Love}
   \label{SampleConv}
   \end{figure*}
-
-On social media platforms where uncivil language is commonly used by a large number of users, hate speech-based toxicity has been discovered to be an important component of virality \cite{maarouf2022virality}, \cite{goel2016structural}. A viral spread corresponds to a rapid dissemination of a piece of information via connective action of users and is often fuelled by the emotions it entails. According to studies, both hate speech and toxicity spiral in action, resulting in a faster and more widespread dispersal. As a result, by monitoring the nature of information diffusion as well as the compounding effect of emotion propagation within a conversation graph, it is possible to identify when and how a conversation may become toxic and thus apply moderation strategies before it becomes toxic. The same method can be used to assess the need for emotion regulation. The goal here is to inform users involved in a conversation about the emotional impact of their actions and to gently nudge them towards a responsible mindset through repeated application of the same.
-
-A toxic tweet on Twitter is defined as an unreasonably rude or disrespectful comment that causes a person to leave the conversation. Hence, for this work, we define toxicity in a conversation as the disproportionate or excessive influx of toxic tweets/responses into an otherwise neutral post \cite{aroyo2019crowdsourcing}, \cite{xenos2021toxicity}. As previously discussed (Section 3.5) in this paper, we categorise tweets into six emotions (namely, anger, love, joy, fear, sadness, and surprise). The influx of anger has been regarded as rage-inducing, rude, or disrespectful, and is thus regarded as an indicator of toxicity.
-
-
-% Please add the following required packages to your document preamble:
-% \usepackage{graphicx}
-\begin{table}[]
-\caption{Comparison of proposed framework against Perspective API}
-\label{tab:my-table}
-\resizebox{\columnwidth}{!}{%
-\begin{tabular}{llll}
-\hline
-Utilised Model &
-  \begin{tabular}[c]{@{}l@{}}Identification of\\ influential nodes\end{tabular} &
-  \begin{tabular}[c]{@{}l@{}}Percentage of nodes\\  identified as toxic\end{tabular} &
-  \begin{tabular}[c]{@{}l@{}}Possible reduction in\\ toxicity if acted on\\ these nodes\end{tabular} \\ \hline
-Proposed Framework &
-  \begin{tabular}[c]{@{}l@{}}Based on\\ impact score,\\ taking into account\\ the tweet text \\ as well as its\\ connectivity\end{tabular} &
-  1-4\% &
-  10\% \\ \hline
-Perspective API &
-  \begin{tabular}[c]{@{}l@{}}Based on\\ toxicity, taking\\ \\ into account only\\ the tweet text\end{tabular} &
-  1-2\% &
-  7\% \\ \hline
-Combination &
-  \begin{tabular}[c]{@{}l@{}}Takes into account \\ the emotion in the\\ tweet text, the \\ connectivity\\ as well as its toxicity\end{tabular} &
-  1-4\% &
-  12\% \\ \hline
-\end{tabular}%
-}
-\end{table}
 The structure and toxicity of Twitter conversations have been extensively researched. We use the findings from these studies to validate the applicability of our framework. We do so based on three attributes: structural characteristics, emotions and virality, and the development of connective action.
 \subsection{Structural Characteristics}
 Users can respond to a tweet/post by liking, sharing, or commenting on it. These actions may elicit additional responses from other users. This results in a conversation graph with reply trees that are rooted in the original tweet. Toxicity has been shown to increase as the size, density, and width of a conversation graph increase \cite{kanavos2014conversation}, \cite{saveski2021structure}. As shown in Table 4, as the size of the conversation grows, it becomes dominated by a single emotion that has been expressed the most, as opposed to the initial distribution of emotions. If we consider a reply tree's toxicity to be the fraction of toxic tweets it receives, we can see that it increases with the size, width, and density of the reply tree. The percentage of angry tweet responses skyrockets at 40\% and continues to rise until it reaches 80\%. Because anger spreads faster than other emotions, the same pattern can be seen when comparing the percentage of emotions contained in the nodes to the total number of nodes in the graph. Recently, the Wiener index has been used to analyze the structure of information diffusion, specifically to determine whether information spreads in a broadcast or viral manner \cite{saveski2021structure}, \cite{goel2016structural}. The Wiener index w(T) of a response tree T is defined as the average distance between all pairs of nodes in the tree. A low Wiener index is associated with the broadcast structure of diffusion, in which users mostly respond to the original tweet and there is little engagement among users, whereas a high Wiener index value is associated with viral spread, in which back-and-forth engagement among users is greater than the responses to the original tweet. 
@@ -614,6 +587,33 @@ This necessitates dealing with the imbalanced induction of anger on social media
 
 
 
+% Please add the following required packages to your document preamble:
+% \usepackage{graphicx}
+\begin{table}[]
+\caption{Comparison of proposed framework against Perspective API}
+\label{tab:my-table}
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{llll}
+\hline
+Utilised Model &
+  \begin{tabular}[c]{@{}l@{}}Identification of\\ influential nodes\end{tabular} &
+  \begin{tabular}[c]{@{}l@{}}Percentage of nodes\\  identified as toxic\end{tabular} &
+  \begin{tabular}[c]{@{}l@{}}Possible reduction in\\ toxicity if acted on\\ these nodes\end{tabular} \\ \hline
+Proposed Framework &
+  \begin{tabular}[c]{@{}l@{}}Based on\\ impact score,\\ taking into account\\ the tweet text \\ as well as its\\ connectivity\end{tabular} &
+  1-4\% &
+  10\% \\ \hline
+Perspective API &
+  \begin{tabular}[c]{@{}l@{}}Based on\\ toxicity, taking \\ into account only\\ the tweet text\end{tabular} &
+  1-2\% &
+  7\% \\ \hline
+Combination &
+  \begin{tabular}[c]{@{}l@{}}Takes into account \\ the emotion in the\\ tweet text, the \\ connectivity\\ as well as its toxicity\end{tabular} &
+  1-4\% &
+  12\% \\ \hline
+\end{tabular}%
+}
+\end{table}
 \subsection{Performance Evaluation}
 Aside from preventing the compounding of anger or hate speech in general that later becomes toxic, this framework considers the subjectivity of toxicity by not relying solely on the content of a post/reply/comment and considering its impact on the ongoing conversation. We evaluated our framework by comparing it to the toxicity scores generated by the Google Perspective API. The Perspective API provides information about a comment's potential impact on a conversation by assigning a "toxicity" score to it. We extracted the toxicity in a comment using the AnalyzeComment method, which returns a probability score (a value in the range of 0-1). The score represents the percentage of readers who consider the comment to be toxic. To ensure consistency across our experiments, we calculated a toxicity threshold value (0.9) based on the mean value reported in the analysis. The Perspective API also recommends this threshold value for research; a high value reduces the possibility of bias. Following that, we classified a tweet/comment as toxic based on this threshold value. When the toxicity of the conversation was examined, it was discovered that not only were the most toxic tweets/comments also some of the influential nodes but that more than 87\% of the toxicity of the overall conversation was concentrated in the reply tree of influential nodes. We used the toxicity score from the Perspective API to find the influential nodes because the goal is to reduce the induction of hate speech in a conversation by analysing its influential nodes. Thereafter, we used a combination of our rule and toxicity scores to identify influential nodes in a conversation. We discovered that while the influential nodes generated by our framework and the Perspective API have a 75\% match, the influential nodes generated by the combination of the framework and the API have a 94.3\% match. This confirms that the proposed framework can be used to identify comments that may be contributing to the toxicity of a post while taking into account their subjectivity and whether or not they are individually toxic. This framework can be used in conjunction with APIs such as AnalyseComment to understand the source(s) of toxicity in conversations by taking both content and context into account. As shown in Table 3, combining the proposed framework with the Google Perspective API improves the identification of toxic tweets by 3\% and opens up the possibility of reducing toxicity by 5\%. This increase is due to the use of both context and content-based node evaluation in the conversation graph.
 
