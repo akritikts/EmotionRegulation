@@ -37,6 +37,8 @@
 %% The first command in your LaTeX source must be the \documentclass command.
 \documentclass[acmtog]{acmart}
 \usepackage{subcaption}
+\usepackage{array}
+
 
 %%
 %% \BibTeX command to typeset BibTeX logo in the docs
@@ -69,7 +71,9 @@
 %% receive a unique submission ID from the organizers
 %% of the event, and this ID should be used as the parameter to this command.
 %%\acmSubmissionID{123-A56-BU3}
-
+\newenvironment{conditions}
+  {\par\vspace{\abovedisplayskip}\noindent\begin{tabular}{>{$}l<{$} @{${}={}$} l}}
+  {\end{tabular}\par\vspace{\belowdisplayskip}}
 %%
 %% The majority of ACM publications use numbered citations and
 %% references.  The command \citestyle{authoryear} switches to the
@@ -408,14 +412,27 @@ Parameter                                         & Description                 
 \end{table}
 
 The number of direct responses indicates a node's in-degree, and the total responses thread indicates a node's ancestors (number of nodes that have a path to the source). Pagerank is used to rank nodes with the same in-degree; (it has been preferred over betweenness centrality in this case because it estimates the nodes' local importance \cite{antonakaki2021survey}). The distance from the root is used as a factor to reinstate the distance of a trigger, a comment that initiated the reply tree is more influential than a response in the reply tree. Based on these attributes, the emotional influence of child nodes and the terminating nodes for the root node was calculated using the following rule (also shown in Fig-\ref{fig:desc}): 
-    
 
-\textit{The impact of nodes in G = (V, E, A) on the root node R is given by:}
 
-% 
-$\forall \,V \in G-\{R\},
-Em(R) = \sum{Em(V1, V2, V3....Vn)}
-where \,Em(Vi) =\prod{Ai}$
+
+
+The impact of nodes in G = (V, E, A) on the root node R is given by:
+\begin{equation}
+\forall \,V \in G-\{R\},
+E_{m}(R) = \sum{E_{m}(V1, V2, V3....Vn)}
+\end{equation}
+where:
+\begin{conditions}
+E_{m}(Vi) & f(Ai)
+\end{conditions}
+
+% \textit{The impact of nodes in G = (V, E, A) on the root node R is given by:}
+
+% % 
+
+% $\forall \,V \in G-\{R\},
+% Em(R) = \sum{Em(V1, V2, V3....Vn)}
+% where \,Em(Vi) =\prod{Ai}$
 
 
 
